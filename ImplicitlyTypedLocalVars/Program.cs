@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImplicitlyTypedLocalVars
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            DeclareExplicitVars();
             DeclareImplicitVars();
 
             Console.ReadLine();
@@ -20,6 +17,13 @@ namespace ImplicitlyTypedLocalVars
             int myInt = 0;
             bool myBool = true;
             string myString = "Time, marches on...";
+
+            Console.WriteLine("Declaring Explicit variables: ");
+
+            Console.WriteLine($"myInt is a {myInt.GetType().Name}");
+            Console.WriteLine($"myBool is a {myBool.GetType().Name}");
+            Console.WriteLine($"myString is a {myString.GetType().Name}");
+            Console.WriteLine();
         }
         static void DeclareImplicitVars()
         {
@@ -27,9 +31,12 @@ namespace ImplicitlyTypedLocalVars
             var myBool = true;
             var myString = "Time, marches on...";
 
+            Console.WriteLine("Declaring implicit variables: ");
+
             Console.WriteLine($"myInt is a {myInt.GetType().Name}");
             Console.WriteLine($"myBool is a {myBool.GetType().Name}");
             Console.WriteLine($"myString is a {myString.GetType().Name}");
+            Console.WriteLine();
         }
     }
 }
